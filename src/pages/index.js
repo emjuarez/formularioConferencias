@@ -11,9 +11,6 @@ const IndexPage = () => {
 
   return (
     <>
-    <dix>
-      <h1>Hola bb</h1>
-    </dix>
     <formSection>
       <h1>Bienvenido a Talentlook!</h1>
       <h2>
