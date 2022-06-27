@@ -1,21 +1,20 @@
 import React, {useState} from "react"
 import {nanoid} from "nanoid"
 
-const MultipleComponent = () => {
+const MultipleComponent = (props) => {
 
   const[newAnswer, setNewAnswer] = useState({
     content:"",
   })
+  const [respuesta, setRespuesta] = useState("")
   const[list, setList] = useState([])
   const [error, setError] = useState("")
 
   const handleChange = (event) => {
+
+    console.log('avgeerrr', event.target.value)
     
-    setNewAnswer({
-			...newAnswer, // spread operator ES6+ - Object Assign
-			id: nanoid(),
-		 	[event.target.name]: event.target.value
-		})
+    setRespuesta(`${event.target.value}`)
 
   }
 
@@ -43,17 +42,25 @@ const MultipleComponent = () => {
 		setError("")
 
   }
+
+  const addAnswer = () => {
+
+    console.log('respuesta', respuesta)
+
+    setList([
+      ...list,
+      respuesta
+    ])
+  }
   
 
   return (
     <>
-      <form onSubmit={(evt) => {handleSubmit(evt)}}>
         <input onChange={ evt => { handleChange(evt) }}/>
         <div>
-          <button type="submit">Añadir</button>
+          <p onClick={() => addAnswer()} style={{cursor: "pointer"}}>Añadir</p>
         </div>
-      </form>
-      {	list.map((elt, index) => {
+        {	list.map((elt, index) => {
 						return (
 							<div className="mb-4 bg-blue-600 text-white" key={index}>
 								<p>{elt}</p>
