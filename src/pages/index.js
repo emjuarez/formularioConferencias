@@ -5,6 +5,10 @@ import "../css/typography.css"
 
 const FormSection = styled.div`
 background-color: #ffb71b;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
 
 >div:nth-child(1) h1 {
   font-family: "RNS Sanz Black";
@@ -12,10 +16,40 @@ background-color: #ffb71b;
 }
 >div:nth-child(2) h2 {
   font-family: "RNS Sanz Bold";
-  
+  width:700px;
+  text-align: center;
 }
 >div:nth-child(3) h3 {
   font-family: "RNS Sanz Semibold";
+  
+}
+>div:nth-child(3) input ,select{
+  font-family: "RNS Sanz Semibold";
+  width:300px;
+  height: 30px;
+  border-radius: 7px
+  
+}
+>div:nth-child(3) textarea {
+  font-family: "RNS Sanz Semibold";
+  width:300px;
+  height: 70px;
+  border-radius: 7px
+  
+}
+>div:nth-child(3) h2{
+  font-family: "RNS Sanz Bold";
+  width:650px;
+  text-align: center;
+  margin-bottom:
+  
+}
+>div:nth-child(3) form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+ 
   
 }
 >div:nth-child(3) h2 {
@@ -48,6 +82,7 @@ const IndexPage = () => {
         method= "POST"
       >
         <h3>Ayúdanos llenando el siguiente formato.Muchas gracias!</h3>
+        <h3>Nombre</h3>
         <input type="text" name='nombre' placeholder="Nombre" />
         <h3>Información Personal.</h3>
         <textarea name='nombre' placeholder="Nombre" />

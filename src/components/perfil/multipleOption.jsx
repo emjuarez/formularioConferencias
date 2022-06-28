@@ -4,9 +4,33 @@ import styled from "styled-components"
 
 const AnswerSection = styled.div`
 
+>div:nth-child(1)  {
+  font-family: "RNS Sanz Bold";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 >div:nth-child(2) p {
   font-family: "RNS Sanz Bold";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+>div:nth-child(3){
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+>div:nth-child(3) p {
+  font-family: "RNS Sanz Semibold";
+  margin-right: 0px;
   
+}
+>div:nth-child(3) img {
+  width:30px;
 }
 `
 

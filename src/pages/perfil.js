@@ -10,18 +10,39 @@ const initialList = []
 const FormSection = styled.div`
 
 background-color: #ffb71b;
-padding: 5% 0 5% 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
 
 >div:nth-child(1) h1 {
-  font-family: "RNS Sanz Black";
+  font-family: "RNS Sanz Black";  
+}
+>div:nth-child(2)  form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   
 }
 >div:nth-child(2) h3 {
   font-family: "RNS Sanz Semibold";
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
->div:nth-child(2), >div:nth-child(1), >div:nth-child(7) {
+>div:nth-child(2) input ,select{
   font-family: "RNS Sanz Semibold";
+  width:300px;
+  height: 30px;
+  border-radius: 7px 
+}
+>div:nth-child(2) textarea {
+  font-family: "RNS Sanz Semibold";
+  width:300px;
+  height: 70px;
+  border-radius: 7px
   
 }
 `
