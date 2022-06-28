@@ -26,12 +26,43 @@ const AnswerSection = styled.div`
 }
 >div:nth-child(3) p {
   font-family: "RNS Sanz Semibold";
-  margin-right: 0px;
+  margin-right: 1px;
   
 }
 >div:nth-child(3) img {
   width:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+@media only screen and (min-width: 1500px) {
+
+>div:nth-child(2) p {
+    font-size: 25px;
+  }
+  >div:nth-child(3) p {
+    font-size: 30px;
+  }
+  >div:nth-child(3) img {
+    width: 45px;
+  }
+
+}
+@media only screen and (min-width: 2000px) {
+
+>div:nth-child(2) p {
+    font-size: 30px;
+  }
+  >div:nth-child(3) p {
+    font-size: 35px;
+  }
+  >div:nth-child(3) img {
+    width: 55px;
+  }
+
+}
+
 `
 
 const MultipleComponent = (props) => {
@@ -78,7 +109,9 @@ const MultipleComponent = (props) => {
 						return (
 							<div>
 								<p>{elt}</p>
+                
                 <img onClick={() => deleteAnswer(elt)} src={Cross} alt="delete"/>
+                
 							</div>
 					  )
 			  })
