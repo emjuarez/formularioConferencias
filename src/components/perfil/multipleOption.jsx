@@ -24,21 +24,19 @@ const MultipleComponent = (props) => {
   const addAnswer = () => {
 
     console.log('respuesta', respuesta)
-    console.log(list)
+    
     
     setList([
       ...list,
       respuesta
     ])
+    console.log(list)
   }
-  const deleteAnswer = () => {
 
-    const filteredAnswers = list.filter(() => {
 
-      return list !== "${event.target.value}"
-    })
+  const deleteAnswer = (elt) => {
 
-    return setList(filteredAnswers)
+    setList(list.filter(item => item !== elt))
   }
   
 
@@ -54,9 +52,9 @@ const MultipleComponent = (props) => {
         <div>
         {	list.map((elt, index) => {
 						return (
-							<div className="mb-4 bg-blue-600 text-white" key={index}>
+							<div>
 								<p>{elt}</p>
-                <img onClick={() => deleteAnswer()} src={Cross} alt="delete"/>
+                <img onClick={() => deleteAnswer(elt)} src={Cross} alt="delete"/>
 							</div>
 					  )
 			  })

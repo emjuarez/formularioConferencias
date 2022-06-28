@@ -4,6 +4,7 @@ import useWindowSize from "../hooks/useWindowSize"
 import "../css/typography.css"
 
 const FormSection = styled.div`
+background-color: #ffb71b;
 
 >div:nth-child(1) h1 {
   font-family: "RNS Sanz Black";

@@ -5,7 +5,12 @@ import "../css/typography.css"
 
 const initialList = []
 
+
+
 const FormSection = styled.div`
+
+background-color: #ffb71b;
+padding: 5% 0 5% 0;
 
 >div:nth-child(1) h1 {
   font-family: "RNS Sanz Black";
