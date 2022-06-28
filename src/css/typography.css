@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "RNS Sanz Light";
+    src: url("../static/fonts/RNSSanz-Light.ttf");
+}
+@font-face {
+    font-family: "RNS Sanz Normal";
+    src: url("../static/fonts/RNSSanz-Normal.ttf");
+}
+@font-face {
+    font-family: "RNS Sanz Medium";
+    src: url("../static/fonts/RNSSanz-Medium.ttf");
+}
+@font-face {
+    font-family: "RNS Sanz Semibold";
+    src: url("../static/fonts/RNSSanz-SemiBold.ttf");
+}
+@font-face {
+    font-family: "RNS Sanz Bold";
+    src: url("../static/fonts/RNSSanz-Bold.ttf");
+}
+@font-face {
+    font-family: "RNS Sanz Extrabold";
+    src: url("../static/fonts/RNSSanz-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "RNS Sanz Black";
+    src: url("../static/fonts/RNSSanz-Black.ttf");
+}

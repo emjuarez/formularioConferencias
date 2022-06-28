@@ -1,73 +1,68 @@
 import React, {useState} from "react"
-import {nanoid} from "nanoid"
+import Cross from "../../images/Delete-Button-PNG-File-Download-Free.webp"
+import styled from "styled-components"
+
+const AnswerSection = styled.div`
+
+>div:nth-child(2) p {
+  font-family: "RNS Sanz Bold";
+  
+}
+`
 
 const MultipleComponent = (props) => {
 
-  const[newAnswer, setNewAnswer] = useState({
-    content:"",
-  })
   const [respuesta, setRespuesta] = useState("")
-  const[list, setList] = useState([])
-  const [error, setError] = useState("")
-
+  const [list, setList] = useState([])
+  
   const handleChange = (event) => {
-
-    console.log('avgeerrr', event.target.value)
     
     setRespuesta(`${event.target.value}`)
-
-  }
-
-  const handleSubmit = (event) => {
-
-    event.preventDefault() // DETENER LA RECARGA DE PÁGINA
-
-		if(!newAnswer) {
-
-			setError("Existe un campo vacío. Por favor, verifica nuevamente.")
-
-			return
-
-		}
-
-		setList([
-			...list,
-			newAnswer
-		])
-
-		setNewAnswer({
-      content:"",
-    })
-
-		setError("")
 
   }
 
   const addAnswer = () => {
 
     console.log('respuesta', respuesta)
-
+    console.log(list)
+    
     setList([
       ...list,
       respuesta
     ])
   }
+  const deleteAnswer = () => {
+
+    const filteredAnswers = list.filter(() => {
+
+      return list !== "${event.target.value}"
+    })
+
+    return setList(filteredAnswers)
+  }
   
 
   return (
     <>
-        <input onChange={ evt => { handleChange(evt) }}/>
+    <AnswerSection>
+        <div>
+          <input onChange={ evt => { handleChange(evt) }}/>
+        </div>
         <div>
           <p onClick={() => addAnswer()} style={{cursor: "pointer"}}>Añadir</p>
         </div>
+        <div>
         {	list.map((elt, index) => {
 						return (
 							<div className="mb-4 bg-blue-600 text-white" key={index}>
 								<p>{elt}</p>
+                <img onClick={() => deleteAnswer()} src={Cross} alt="delete"/>
 							</div>
 					  )
 			  })
       }
+      </div>
+      </AnswerSection>
     </>
   )
 }

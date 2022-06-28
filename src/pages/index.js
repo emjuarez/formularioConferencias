@@ -1,8 +1,27 @@
 import React, {useState, useEffect} from "react"
 import styled from "styled-components"
 import useWindowSize from "../hooks/useWindowSize"
+import "../css/typography.css"
 
-const formSection = styled.div``
+const FormSection = styled.div`
+
+>div:nth-child(1) h1 {
+  font-family: "RNS Sanz Black";
+  
+}
+>div:nth-child(2) h2 {
+  font-family: "RNS Sanz Bold";
+  
+}
+>div:nth-child(3) h3 {
+  font-family: "RNS Sanz Semibold";
+  
+}
+>div:nth-child(3) h2 {
+  font-family: "RNS Sanz Bold";
+  
+}
+`
 
 
 // markup
@@ -11,13 +30,18 @@ const IndexPage = () => {
 
   return (
     <>
-    <formSection>
+    <FormSection>
+    <div>
       <h1>Bienvenido a Talentlook!</h1>
+    </div>
+    <div>
       <h2>
         Talentlook es una plataforma de conferencistas, talleristas y celebridades con un
         enfoque especial e innovador. Agradecemos mucho tu interés en ser parte de este
         gran proyecto.
       </h2>
+    </div>
+    <div>
       <form
         action= ""
         method= "POST"
@@ -76,7 +100,8 @@ const IndexPage = () => {
         </div>
         
       </form>
-    </formSection>
+      </div>
+    </FormSection>
     </>
   )
 }
