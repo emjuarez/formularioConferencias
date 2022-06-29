@@ -18,7 +18,7 @@ position: relative;
 >div:nth-child(1) h1 {
   font-family: "RNS Sanz Black";  
 }
->div:nth-child(2)  form {
+>div:nth-child(2) form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +31,7 @@ position: relative;
   flex-direction: column;
   align-items: center;
   position: relative;
+  text-align: center;
 }
 >div:nth-child(2) input{
   font-family: "RNS Sanz Semibold";
@@ -45,44 +46,127 @@ position: relative;
   border-radius: 7px
   
 }
-@media only screen and (min-width: 1500px) {
+>div:nth-child(2) button{
+  font-family: "RNS Sanz Semibold";
+  background-color: white;
+  border-color: gray;
+  border-radius: 7px;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  margin: 50px;
+}
+  @media only screen and (min-width: 1500px) {
+
+      >div:nth-child(1) h1 {
+          font-size: 45px;
+      }
+      >div:nth-child(2) h3 {
+          font-size: 25px;
+        }
+        >div:nth-child(2) input {
+          width: 600px;
+          height: 50px;
+          font-size: 25px;
+        }
+        >div:nth-child(2) textarea {
+          width: 600px;
+          height: 150px;
+          font-size: 25px;
+        }
+  }
+  @media only screen and (min-width: 2000px) {
 
     >div:nth-child(1) h1 {
-        font-size: 45px;
+        font-size: 65px;
+    }
+    >div:nth-child(2) h3 {
+        font-size: 35px;
+    }
+    >div:nth-child(2) input {
+      width: 700px;
+      height: 60px;
+      font-size: 30px;
+    }
+    >div:nth-child(2) textarea {
+      width: 700px;
+      height: 250px;
+      font-size: 30px;
+    }
+  }
+  @media only screen and (max-width: 1500px){
+    >div:nth-child(1) h1 {
+      font-size: 55px;
+    }
+    >div:nth-child(2) h3 {
+      font-size: 30px;
+      margin-top: 40px;
+    }
+    >div:nth-child(2) input {
+      width: 800px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 17px 
+    }
+    >div:nth-child(2) textarea {
+      width: 800px;
+      height: 300px;
+      font-size: 20px;
+      border-radius: 17px 
+    }
+  }
+  @media only screen and (max-width: 885px){
+    >div:nth-child(1) h1 {
+      font-size: 55px;
+    }
+    >div:nth-child(2) h3 {
+      font-size: 20px;
+    }
+    >div:nth-child(2) input {
+      width: 500px;
+      height: 40px;
+      font-size: 20px;
+    }
+    >div:nth-child(2) textarea {
+      width: 500px;
+      height: 200px;
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 736px){
+    >div:nth-child(2) h3 {
+      font-size: 20px;
+    }
+    >div:nth-child(2) input {
+      width: 500px;
+      height: 40px;
+      font-size: 20px;
+    }
+    >div:nth-child(2) textarea {
+      width: 500px;
+      height: 200px;
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 570px){
+    >div:nth-child(1) h1 {
+      font-size: 45px;
     }
     >div:nth-child(2) h3 {
         font-size: 25px;
-      }
-      >div:nth-child(2) input {
-        width: 600px;
-        height: 50px;
-        font-size: 25px;
-      }
-      >div:nth-child(2) textarea {
-        width: 600px;
-        height: 150px;
-        font-size: 25px;
-      }
-}
-@media only screen and (min-width: 2000px) {
-
->div:nth-child(1) h1 {
-    font-size: 65px;
-}
->div:nth-child(2) h3 {
-    font-size: 35px;
+    
+    }
+    >div:nth-child(2) input {
+      width: 450px;
+      height: 40px;
+      font-size: 20px;
+    }
+    >div:nth-child(2) textarea {
+      width: 450px;
+      height: 150px;
+      font-size: 20px;
+    }
   }
-  >div:nth-child(2) input {
-    width: 700px;
-    height: 60px;
-    font-size: 30px;
-  }
-  >div:nth-child(2) textarea {
-    width: 700px;
-    height: 250px;
-    font-size: 30px;
-  }
-}
 `
 
 const PerfilPage = () => {
@@ -123,7 +207,7 @@ const PerfilPage = () => {
                         <Multiple/>
                     </div>
                     <div>
-                        <button type="submit">SUBMIT</button>
+                        <button type="submit">enviar</button>
                     </div>
                 </form>
             </div>
