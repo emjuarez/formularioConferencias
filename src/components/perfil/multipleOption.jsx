@@ -4,6 +4,14 @@ import styled from "styled-components"
 
 const AnswerSection = styled.div`
 
+.listAnwers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 900px;
+}
+
 >div:nth-child(1)  {
   font-family: "RNS Sanz Bold";
   display: flex;
@@ -18,19 +26,15 @@ const AnswerSection = styled.div`
   align-items: center;
   position: relative;
 }
->div:nth-child(3)>div:nth-child(1){
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+>div:nth-child(3){
+  
 }
 >div:nth-child(3) p {
-  font-family: "RNS Sanz Semibold";
-  margin-right: 50px;
-  
+  font-family: "RNS Sanz Semibold";  
 }
 >div:nth-child(3) img {
   width:30px;
+  
 }
 @media only screen and (min-width: 1500px) {
 
@@ -103,7 +107,7 @@ const MultipleComponent = (props) => {
         <div>
         {	list.map((elt, index) => {
 						return (
-							<div>
+							<div className="listAnwers">
 								<p>{elt}</p>
                 
                 <img onClick={() => deleteAnswer(elt)} src={Cross} alt="delete"/>
