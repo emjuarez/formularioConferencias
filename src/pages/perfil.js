@@ -74,6 +74,11 @@ position: relative;
           height: 150px;
           font-size: 25px;
         }
+        >div:nth-child(2) button{
+        width: 170px;
+        height: 60px;
+        font-size: 30px;
+      }
   }
   @media only screen and (min-width: 2000px) {
 
@@ -93,6 +98,7 @@ position: relative;
       height: 250px;
       font-size: 30px;
     }
+
   }
   @media only screen and (max-width: 1500px){
     >div:nth-child(1) h1 {
@@ -114,6 +120,11 @@ position: relative;
       font-size: 20px;
       border-radius: 17px 
     }
+    >div:nth-child(2) button{
+        width: 120px;
+        height: 50px;
+        font-size: 25px;
+      }
   }
   @media only screen and (max-width: 885px){
     >div:nth-child(1) h1 {
@@ -132,6 +143,11 @@ position: relative;
       height: 200px;
       font-size: 20px;
     }
+    >div:nth-child(2) button{
+        width: 120px;
+        height: 50px;
+        font-size: 25px;
+      }
   }
   @media only screen and (max-width: 736px){
     >div:nth-child(2) h3 {

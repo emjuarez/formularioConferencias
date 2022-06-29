@@ -7,9 +7,9 @@ const AnswerSection = styled.div`
 .listAnwers{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 900px;
+  width: 600px;
 }
 
 >div:nth-child(1)  {
@@ -26,14 +26,13 @@ const AnswerSection = styled.div`
   align-items: center;
   position: relative;
 }
->div:nth-child(3){
-  
-}
 >div:nth-child(3) p {
   font-family: "RNS Sanz Semibold";  
+  margin-right: 60px;
 }
 >div:nth-child(3) img {
   width:30px;
+  margin
   
 }
 @media only screen and (min-width: 1500px) {
