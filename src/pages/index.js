@@ -45,6 +45,9 @@ position: relative;
   margin-bottom:
   
 }
+>div:nth-child(3) h3{
+  text-align: center;
+}
 >div:nth-child(3) form {
   display: flex;
   flex-direction: column;
@@ -55,7 +58,17 @@ position: relative;
 }
 >div:nth-child(3) h2 {
   font-family: "RNS Sanz Bold";
-  
+  margin-top: 50px;
+}
+>div:nth-child(3) button{
+  font-family: "RNS Sanz Semibold";
+  background-color: white;
+  border-color: gray;
+  border-radius: 7px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  margin: 50px;
 }
 @media only screen and (min-width: 1500px) {
       >div:nth-child(1) {
@@ -109,7 +122,114 @@ position: relative;
         font-size: 40px;
         width:1020px;
       }
+      
     }
+    @media only screen and (max-width: 1500px){
+      >div:nth-child(1) h1 {
+        font-size: 55px;
+      }
+      >div:nth-child(2) h2 {
+        font-size: 35px;
+        width: 740px;  
+      }
+        >div:nth-child(3) h3 {
+        font-size: 30px;
+        width: 740px;
+      }
+      >div:nth-child(3) input ,select{
+        width: 600px;
+        height: 50px;
+        font-size: 20px;
+      }
+      >div:nth-child(3) textarea {
+        width: 600px;
+        height: 300px;
+        font-size: 20px;        
+      }
+      >div:nth-child(3) h2{
+        font-size: 35px;
+        width: 740px;
+      }
+    }
+    @media only screen and (max-width: 885px){
+      >div:nth-child(1) h1 {
+        font-size: 45px;
+      }
+      >div:nth-child(2) h2 {
+        font-size: 35px;
+        width: 640px;  
+      }
+      >div:nth-child(3) h3 {
+        font-size: 30px;
+        width: 610px;
+      }
+      >div:nth-child(3) input ,select{
+        width:600px;
+        height: 50px;
+        font-size: 20px; 
+      }
+      >div:nth-child(3) textarea {
+        width: 600px;
+        height: 300px;
+        font-size: 20px;        
+      }
+      >div:nth-child(3) h2{
+        font-size: 35px;
+        width: 640px;
+      }
+      >div:nth-child(3) button{
+        width: 250px;
+        height: 60px;
+        font-size: 30px;
+      }
+    }
+    @media only screen and (max-width: 736px){
+      >div:nth-child(1) {
+        font-size: 20px;
+      }
+      >div:nth-child(2) h2 {
+        font-size: 20px;
+        width: 440px;  
+      }
+      >div:nth-child(3) h3 {
+        font-size: 20px;
+        width: 550px;
+      }
+      >div:nth-child(3) input ,select{
+        width:500px;
+        height: 40px;
+        font-size: 20px; 
+      }
+      >div:nth-child(3) textarea {
+        width: 500px;
+        height:200px;
+        font-size: 20px;        
+      }
+      >div:nth-child(3) h2{
+        font-size: 20px;
+        width:440px;
+      }
+    }
+    @media only screen and (max-width: 570px) {
+      >div:nth-child(1) h1{
+        font-size: 45px;
+      }
+      >div:nth-child(2) h2{
+        font-size: 35px;
+        width: 300px;
+      }
+      >div:nth-child(3) h3 {
+        font-size: 25px;
+        width: 300px;
+      }
+      >div:nth-child(3) h2{
+        font-size: 35px;
+        width:400px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
 `
 
 
@@ -135,7 +255,7 @@ const IndexPage = () => {
         action= ""
         method= "POST"
       >
-        <h3>Ayúdanos llenando el siguiente formato.Muchas gracias!</h3>
+        <h3>Ayúdanos llenando el siguiente formato. Muchas gracias!</h3>
         <h3>Nombre</h3>
         <input type="text" name='nombre' placeholder="Nombre" />
         <h3>Información Personal.</h3>
@@ -146,7 +266,7 @@ const IndexPage = () => {
         <input type="text" name='fechaDeNacimiento' placeholder="Fecha de nacimiento" />
         <h3>Teléfono.</h3>
         <input type="text" name='telefono' placeholder="Teléfono" />
-        <h3>Estás considerando el poder impartir</h3>
+        <h3>Estás considerando el poder impartir:</h3>
         <select>
           <option>-Please select-</option>
           <option>Ponencia</option>
@@ -186,7 +306,7 @@ const IndexPage = () => {
             Te contactaremos en las próximas semanas para continuar con el diálogo.
         </h2>
         <div>
-          <button type="submit">SUBMIT</button>
+          <button type="submit">send</button>
         </div>
         
       </form>

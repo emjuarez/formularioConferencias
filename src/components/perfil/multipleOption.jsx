@@ -18,7 +18,7 @@ const AnswerSection = styled.div`
   align-items: center;
   position: relative;
 }
->div:nth-child(3){
+>div:nth-child(3)>div:nth-child(1){
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,15 +26,11 @@ const AnswerSection = styled.div`
 }
 >div:nth-child(3) p {
   font-family: "RNS Sanz Semibold";
-  margin-right: 1px;
+  margin-right: 50px;
   
 }
 >div:nth-child(3) img {
   width:30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 @media only screen and (min-width: 1500px) {
 
